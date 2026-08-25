@@ -239,6 +239,7 @@ TIPOS = [
     "INDEXACION - BPO.",
     "REVISION INTERNA",
     "SERVICIOS",
+    "ENVIO DE MATERIALES",
 ]
 PRIORIDADES = ["Seleccione una opcion", "RUSH", "TURNO SIGUIENTE"]
 ESTADOS = [
