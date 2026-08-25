@@ -227,6 +227,9 @@ CLIENTES = [
     "BANCO FORTALEZA",
     "PRENDAMAS",
     "MOLINO ANDINO",
+    "PREVICOR CORREDORES",
+    "WCS-BOLIVIA",
+    "INDUSTRIA Y COMERCIO ALICONSUMO",
 ]
 TIPOS = [
     "Seleccione una opcion",
@@ -263,6 +266,17 @@ DIRECCIONES = [
     "SUCRE",
     "ORURO",
     "POTOSI",
+    "Banco Sol",
+    "Banco BNB",
+    "Banco Fie",
+    "Molino Andino",
+    "Prendamas",
+    "Banco Fortaleza",
+    "Previcor Corredores",
+    "Wcs - Bolivia",
+    "Industria y comercio Aliconsumo",
+    "Banco Nacional de Bolivia - La Paz",
+    "Banco Nacional de Bolivia Sucre",
 ]
 
 if "rows" not in st.session_state:
