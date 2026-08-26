@@ -239,7 +239,7 @@ TIPOS = [
     "INDEXACION - BPO.",
     "REVISION INTERNA",
     "SERVICIOS",
-    "ENVIO DE MATERIALES",
+    "ENVIO DE CAJAS NUEVAS",
 ]
 PRIORIDADES = ["Seleccione una opcion", "RUSH", "TURNO SIGUIENTE"]
 ESTADOS = [
@@ -250,6 +250,7 @@ ESTADOS = [
     "ENTREGADO",
     "ENVIADO",
     "ANULADO",
+    "POR ETIQUETAR",
 ]
 DIRECCIONES = [
     "Seleccione una opcion",
@@ -658,9 +659,9 @@ def aplicar_estilo_rutas(df):
             if "ESTADO" in ncol:
                 if any(x in valor for x in ["ENTREGADO", "ENVIADO", "COMPLETADO"]):
                     estilos[i] = "background-color:#166534;color:white;font-weight:700;"
-                elif any(x in valor for x in ["PENDIENTE", "POR ENVIAR"]):
+                elif any(x in valor for x in ["PENDIENTE", "POR ENVIAR", "POR EXTRAER"]):
                     estilos[i] = "background-color:#B45309;color:white;font-weight:700;"
-                elif any(x in valor for x in ["CANCELADO", "ANULADO"]):
+                elif any(x in valor for x in ["CANCELADO", "ANULADO", "POR ETIQUETAR"]):
                     estilos[i] = "background-color:#991B1B;color:white;font-weight:700;"
 
             if "PRIORIDAD" in ncol and "RUSH" in valor:
@@ -784,10 +785,10 @@ def cerrar_sesion():
 def mostrar_login():
     st.markdown(
         """
-        <div style="max-width:520px;margin:35px auto 18px auto;text-align:center;">
-            <div style="font-size:46px;">🔐</div>
+        <div style="max-width:360px;margin:15px auto 10px auto;text-align:center;">
+            <div style="font-size:30px;">🔐</div>
             <h2 style="margin:0 0 6px 0;">Iniciar sesión</h2>
-            <div style="font-size:13px;opacity:.70;">Acceso al sistema de despacho</div>
+            <div style="font-size:13px;opacity:.65;">Acceso al sistema de despacho</div>
         </div>
         """,
         unsafe_allow_html=True,
