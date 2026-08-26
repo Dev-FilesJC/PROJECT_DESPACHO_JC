@@ -785,10 +785,10 @@ def cerrar_sesion():
 def mostrar_login():
     st.markdown(
         """
-        <div style="max-width:360px;margin:15px auto 10px auto;text-align:center;">
-            <div style="font-size:30px;">🔐</div>
-            <h2 style="margin:0 0 6px 0;">Iniciar sesión</h2>
-            <div style="font-size:13px;opacity:.65;">Acceso al sistema de despacho</div>
+        <div style="margin:10px auto 8px auto;text-align:center;">
+            <div style="font-size:28px;">🔐</div>
+            <div style="font-size:22px; font-weight:700; margin:0;">Iniciar sesión</div>
+            <div style="font-size:11px;opacity:.60;">Acceso al sistema de despacho</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -801,23 +801,26 @@ def mostrar_login():
             f"Actualmente hay {len(usuarios)}."
         )
         return
-
-    with st.form("login_jc_control", clear_on_submit=False):
-        usuario = st.text_input(
-            "👤 Usuario",
-            placeholder="Ingrese su usuario",
-            key="login_usuario",
-        ).strip()
-        password = st.text_input(
-            "🔑 Contraseña",
-            type="password",
-            placeholder="Ingrese su contraseña",
-            key="login_password",
-        )
-        ingresar = st.form_submit_button(
-            "🔐 INGRESAR",
-            use_container_width=True,
-        )
+    # FORMULARIO CENTRO Y COMPACTO
+    col_izq, col_login, col_der = st.columns([1.8, 1, 1.8])
+    with col_login:
+        
+        with st.form("login_jc_control", clear_on_submit=False):
+            usuario = st.text_input(
+                "👤 Usuario",
+                placeholder="Ingrese su usuario",
+                key="login_usuario",
+            ).strip()
+            password = st.text_input(
+                "🔑 Contraseña",
+                type="password",
+                placeholder="Ingrese su contraseña",
+                key="login_password",
+            )
+            ingresar = st.form_submit_button(
+                "🔐 INGRESAR",
+                use_container_width=True,
+            )
 
     if ingresar:
         usuario_key = usuario.lower()
