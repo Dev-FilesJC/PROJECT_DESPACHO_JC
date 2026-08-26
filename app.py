@@ -230,6 +230,8 @@ CLIENTES = [
     "PREVICOR CORREDORES",
     "WCS-BOLIVIA",
     "INDUSTRIA Y COMERCIO ALICONSUMO",
+    "LABORATORIOS LKM",
+    "CLINICA LOS OLIVOS",
 ]
 TIPOS = [
     "Seleccione una opcion",
@@ -278,7 +280,9 @@ DIRECCIONES = [
     "Wcs - Bolivia",
     "Industria y comercio Aliconsumo",
     "Banco Nacional de Bolivia - La Paz",
-    "Banco Nacional de Bolivia Sucre",
+    "Banco Nacional de Bolivia - Sucre",
+    "LABORATORIOS LKM",
+    "CLINICA LOS OLIVOS",
 ]
 
 if "rows" not in st.session_state:
